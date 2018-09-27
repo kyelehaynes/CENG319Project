@@ -7,12 +7,21 @@ import android.media.Image;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Switch;
 
 public class SenzHome extends AppCompatActivity implements View.OnClickListener {
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.senzmenu, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +31,7 @@ public class SenzHome extends AppCompatActivity implements View.OnClickListener 
         ImageView room1 =(ImageView) findViewById(R.id.imageView2);
         ImageView room2 =(ImageView) findViewById(R.id.imageView3);
         ImageView room3 =(ImageView) findViewById(R.id.imageView4);
+
 
         room1.setOnClickListener(this);
         room2.setOnClickListener(this);
