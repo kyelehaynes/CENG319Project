@@ -9,10 +9,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
 
 public class SenzHome extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,14 +31,33 @@ public class SenzHome extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_senz_home);
 
-        ImageView room1 =(ImageView) findViewById(R.id.imageView2);
-        ImageView room2 =(ImageView) findViewById(R.id.imageView3);
-        ImageView room3 =(ImageView) findViewById(R.id.imageView4);
-
-
+        ImageButton room1 =(ImageButton) findViewById(R.id.imageView2);
+        ImageButton room2 =(ImageButton) findViewById(R.id.imageView3);
+        ImageButton room3 =(ImageButton) findViewById(R.id.imageView4);
+        TextView text1 = (TextView) findViewById(R.id.textView);
+        TextView text2 = (TextView) findViewById(R.id.textView2);
+        TextView text3 = (TextView) findViewById(R.id.textView3);
         room1.setOnClickListener(this);
         room2.setOnClickListener(this);
         room3.setOnClickListener(this);
+        text1.setOnClickListener(this);
+        text2.setOnClickListener(this);
+        text3.setOnClickListener(this);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch(item.getItemId())
+        {
+            case R.id.admin:
+                            Intent intent = new Intent(SenzHome.this,SenzAdminLoginActivity.class);
+                            startActivity(intent);
+                            return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 
     @Override
@@ -47,17 +69,25 @@ public class SenzHome extends AppCompatActivity implements View.OnClickListener 
 
 
         switch(v.getId()){
-
+            case R.id.textView:
+                                startActivity(intent1);
+                                break;
+            case R.id.textView2:
+                                startActivity(intent2);
+                                break;
+            case R.id.textView3:
+                                startActivity(intent3);
+                                break;
             case R.id.imageView2:
-                startActivity(intent1);
-                break;
+                                startActivity(intent1);
+                                break;
             case R.id.imageView3:
-                startActivity(intent2);
-                break;
+                                startActivity(intent2);
+                                break;
 
             case R.id.imageView4:
-                startActivity(intent3);
-                break;
+                                startActivity(intent3);
+                                break;
         }
     }
 }

@@ -12,7 +12,7 @@
     android:layout_height="wrap_content"
     >
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageView3"
         android:layout_width="317dp"
         android:layout_height="185dp"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/room" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageView4"
         android:layout_width="317dp"
         android:layout_height="185dp"
@@ -83,7 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageView"
         android:layout_width="317dp"
         android:layout_height="185dp"
@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/room" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageView2"
         android:layout_width="317dp"
         android:layout_height="185dp"
