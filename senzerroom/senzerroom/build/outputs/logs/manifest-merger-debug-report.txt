@@ -1,0 +1,192 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:2:1-36:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\d3e837b1474eb34bd297368408b2cfe1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\70aff454b0e833a03d6f336e5c716b94\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\b7355ff196748df4694b8b2879bbc1a7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6c5a9ae5faa269dd5b962f69be764bc7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\ba475cfa196a14a9e043c00b9a016461\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\315c63ca1b4d5ba7ada8b72f663867e6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\c53e5d99ac129d8bde8638ef0196e840\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\4086f98c207d6cc7840589ada449d21c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\e2f92d52e55254d4230100d97a0cc9fe\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\8c5de75866bced85a4b6aba3088af6ca\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\1651d5089a2fac081dec9533162d230e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\953e6b61002d91a4062e417e1dd40187\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\254ec46299e91b3e4ed5b0cc6c9cb13a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\cdc1892dd6db55710238b540ae732d20\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\e3775663c9713405064d984a7912573c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\91e5f3bbc10dc72a3480244ac7d10b65\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\b0ac9ba3f72020366cabcd9d88839eb2\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\e80cb3f91aa8ba13bc5111aa307c90fd\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\091e50b4a6274106ec40791d2cfe6ec1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\47777100c19eda4373076637fea6eb66\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\0509273105e9d52821d8f2874eb50031\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\83c44cc12b78d532fc669a2cce39e353\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\f5502ded3125e565958dc6cd451cf519\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9b9491e8ad56109cc3302d55e9eceadb\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\ab31e7cebecad0317813705b194ccf00\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d536c5fa34dc3c461d53b1c9208351e1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\19578198b5d6c1d648db1bdc5a8d8f35\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:2:1-36:12
+	package
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:2:1-36:12
+		INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:2:1-36:12
+		INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:6:5-71
+	android:name
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:6:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:7:5-71
+	android:name
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:7:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:8:5-72
+	android:name
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:8:22-69
+application
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:10:5-34:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\70aff454b0e833a03d6f336e5c716b94\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\70aff454b0e833a03d6f336e5c716b94\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\91e5f3bbc10dc72a3480244ac7d10b65\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\91e5f3bbc10dc72a3480244ac7d10b65\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\b0ac9ba3f72020366cabcd9d88839eb2\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\b0ac9ba3f72020366cabcd9d88839eb2\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\91e5f3bbc10dc72a3480244ac7d10b65\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:15:9-35
+	android:label
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:13:9-41
+	android:roundIcon
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:14:9-54
+	android:icon
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:16:9-40
+activity#com.example.senzerroom.SenzHome
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:17:9-23:20
+	android:name
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:17:19-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:21:27-74
+activity#com.example.senzerroom.SenzRoom1
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:24:9-25:53
+	android:parentActivityName
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:25:13-51
+	android:name
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:24:19-44
+activity#com.example.senzerroom.SenzRoom2
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:26:9-27:53
+	android:parentActivityName
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:27:13-51
+	android:name
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:26:19-44
+activity#com.example.senzerroom.SenzRoom3
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:28:9-29:53
+	android:parentActivityName
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:29:13-51
+	android:name
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:28:19-44
+activity#com.example.senzerroom.SenzAdminLoginActivity
+ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:30:9-33:80
+	android:parentActivityName
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:32:13-51
+	android:label
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:33:13-68
+	android:name
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml:31:13-51
+uses-sdk
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\d3e837b1474eb34bd297368408b2cfe1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\d3e837b1474eb34bd297368408b2cfe1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\70aff454b0e833a03d6f336e5c716b94\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\70aff454b0e833a03d6f336e5c716b94\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\b7355ff196748df4694b8b2879bbc1a7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\b7355ff196748df4694b8b2879bbc1a7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6c5a9ae5faa269dd5b962f69be764bc7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6c5a9ae5faa269dd5b962f69be764bc7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\ba475cfa196a14a9e043c00b9a016461\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\ba475cfa196a14a9e043c00b9a016461\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\315c63ca1b4d5ba7ada8b72f663867e6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\315c63ca1b4d5ba7ada8b72f663867e6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\c53e5d99ac129d8bde8638ef0196e840\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\c53e5d99ac129d8bde8638ef0196e840\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\4086f98c207d6cc7840589ada449d21c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\4086f98c207d6cc7840589ada449d21c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\e2f92d52e55254d4230100d97a0cc9fe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\e2f92d52e55254d4230100d97a0cc9fe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\8c5de75866bced85a4b6aba3088af6ca\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\8c5de75866bced85a4b6aba3088af6ca\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\1651d5089a2fac081dec9533162d230e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\1651d5089a2fac081dec9533162d230e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\953e6b61002d91a4062e417e1dd40187\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\953e6b61002d91a4062e417e1dd40187\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\254ec46299e91b3e4ed5b0cc6c9cb13a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\254ec46299e91b3e4ed5b0cc6c9cb13a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\cdc1892dd6db55710238b540ae732d20\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\cdc1892dd6db55710238b540ae732d20\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\e3775663c9713405064d984a7912573c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\e3775663c9713405064d984a7912573c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\91e5f3bbc10dc72a3480244ac7d10b65\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\91e5f3bbc10dc72a3480244ac7d10b65\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\b0ac9ba3f72020366cabcd9d88839eb2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\b0ac9ba3f72020366cabcd9d88839eb2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\e80cb3f91aa8ba13bc5111aa307c90fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\e80cb3f91aa8ba13bc5111aa307c90fd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\091e50b4a6274106ec40791d2cfe6ec1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\091e50b4a6274106ec40791d2cfe6ec1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\47777100c19eda4373076637fea6eb66\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\47777100c19eda4373076637fea6eb66\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\0509273105e9d52821d8f2874eb50031\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\0509273105e9d52821d8f2874eb50031\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\83c44cc12b78d532fc669a2cce39e353\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\83c44cc12b78d532fc669a2cce39e353\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\f5502ded3125e565958dc6cd451cf519\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\f5502ded3125e565958dc6cd451cf519\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9b9491e8ad56109cc3302d55e9eceadb\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9b9491e8ad56109cc3302d55e9eceadb\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\ab31e7cebecad0317813705b194ccf00\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\ab31e7cebecad0317813705b194ccf00\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d536c5fa34dc3c461d53b1c9208351e1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d536c5fa34dc3c461d53b1c9208351e1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\19578198b5d6c1d648db1bdc5a8d8f35\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\kogul\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\19578198b5d6c1d648db1bdc5a8d8f35\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+		ADDED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\kogul\AndroidStudioProjects\MyApplication\senzerroom\src\main\AndroidManifest.xml
