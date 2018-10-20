@@ -1,23 +1,14 @@
 package com.example.senzerroom;
 
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.media.Image;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.Switch;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class SenzHome extends AppCompatActivity implements View.OnClickListener {
+public class SenzHome extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -30,64 +21,50 @@ public class SenzHome extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_senz_home);
+        int numRooms = 10;
 
-        ImageButton room1 =(ImageButton) findViewById(R.id.imageView2);
-        ImageButton room2 =(ImageButton) findViewById(R.id.imageView3);
-        ImageButton room3 =(ImageButton) findViewById(R.id.imageView4);
-        TextView text1 = (TextView) findViewById(R.id.textView);
-        TextView text2 = (TextView) findViewById(R.id.textView2);
-        TextView text3 = (TextView) findViewById(R.id.textView3);
-        room1.setOnClickListener(this);
-        room2.setOnClickListener(this);
-        room3.setOnClickListener(this);
-        text1.setOnClickListener(this);
-        text2.setOnClickListener(this);
-        text3.setOnClickListener(this);
-    }
+        //Main Homescreen layout
+        LinearLayout mainLayout = findViewById(R.id.MainLayout);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        switch(item.getItemId())
+        //Array of ImageButtons to be displayed on screen
+        ImageButton[] rooms = new ImageButton[numRooms];
+        ImageButton temp; //temp ImageButton used in for loop
+
+        //Array of TextViews to be displayed on screen
+        TextView[] roomText = new TextView[numRooms];
+        TextView tempText; //temp ImageButton used in for loop
+
+        //For loop to display the number of rooms equal to numRooms
+        for (int i = 0; i < numRooms; i++)
         {
-            case R.id.admin:
-                            Intent intent = new Intent(SenzHome.this,SenzAdminLoginActivity.class);
-                            startActivity(intent);
-                            return true;
-            default:
-                return super.onOptionsItemSelected(item);
+            temp = new ImageButton(this);
+            tempText = new TextView(this);
 
-        }
-    }
+            //Setting parameters for the ImageButton
+            temp.setImageResource(R.drawable.room);
+            temp.setId(i);
+            temp.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            ));
 
-    @Override
-    public void onClick(View v) {
+            //Setting parameters for the TextView
+            tempText.setText("Room " + (i+1));
+            tempText.setTextColor(getResources().getColor(R.color.white));
+            tempText.setTextSize(18);
+            tempText.setId(i);
+            tempText.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.MATCH_PARENT
+            ));
 
-        Intent intent1 = new Intent(SenzHome.this, SenzRoom1.class);
-        Intent intent2 = new Intent(SenzHome.this, SenzRoom1.class);
-        Intent intent3 = new Intent(SenzHome.this, SenzRoom1.class);
+            //displaying the ImageButton and TextView
+            mainLayout.addView(tempText);
+            mainLayout.addView(temp);
 
-
-        switch(v.getId()){
-            case R.id.textView:
-                                startActivity(intent1);
-                                break;
-            case R.id.textView2:
-                                startActivity(intent2);
-                                break;
-            case R.id.textView3:
-                                startActivity(intent3);
-                                break;
-            case R.id.imageView2:
-                                startActivity(intent1);
-                                break;
-            case R.id.imageView3:
-                                startActivity(intent2);
-                                break;
-
-            case R.id.imageView4:
-                                startActivity(intent3);
-                                break;
+            //adding the current temp ImageButton and TextView to their respective arrays
+            rooms[i] = temp;
+            roomText[i] = tempText;
         }
     }
 }
