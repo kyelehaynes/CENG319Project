@@ -1,70 +1,166 @@
 package com.example.senzerroom;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
-public class SenzHome extends AppCompatActivity {
+import org.w3c.dom.Text;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class SenzHome extends AppCompatActivity implements OnNavigationItemSelectedListener
+{
+    int i;
+    int numRooms = 10;
+    ImageButton[] rooms = new ImageButton[numRooms];
+    ImageButton temp; //temp ImageButton used in for loop
+
+    //Array of TextViews to be displayed on screen
+    TextView[] roomText = new TextView[numRooms];
+    TextView tempText; //temp ImageButton used in for loop
+
+    ArrayList<ImageButton> imgButton = new ArrayList<>(Arrays.asList(rooms));
+    ArrayList<TextView> textViewArrayList = new ArrayList<>(Arrays.asList(roomText));
+
+    DrawerLayout drawer;
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.senzmenu, menu);
-        return true;
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_senz_home);
+
+        android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        drawer = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        setNavigationViewListener();
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        //Main Homescreen layout
+        final LinearLayout mainLayout = findViewById(R.id.MainLayout);
+        final Button myButton;
+        final Button aButton;
+        myButton = new Button(SenzHome.this);
+        myButton.setId(R.id.textRoom);
+        myButton.setText("Generate 10 Rooms");
+        myButton.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT));
+        mainLayout.addView(myButton);
+        myButton.setOnClickListener(new View.OnClickListener()
+        {
+
+            @Override
+            public void onClick(View v)
+            {
+                //For loop to display the number of rooms equal to numRooms
+                for (i = 0; i < numRooms; i++)
+                {
+                    temp = new ImageButton(SenzHome.this);
+                    tempText = new TextView(SenzHome.this);
+
+                    //Setting parameters for the ImageButton
+                    temp.setImageResource(R.drawable.room);
+                    temp.setId(i);
+                    temp.setLayoutParams(new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.WRAP_CONTENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT
+                    ));
+
+                    //Setting parameters for the TextView
+                    tempText.setText("Room " + (i + 1));
+                    tempText.setTextColor(getResources().getColor(R.color.white));
+                    tempText.setTextSize(18);
+                    tempText.setId(i + 10);
+                    tempText.setLayoutParams(new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.MATCH_PARENT
+                    ));
+
+                    //adding the current temp ImageButton and TextView to their respective arrays
+                    rooms[i] = temp;
+                    roomText[i] = tempText;
+                    mainLayout.addView(roomText[i]);
+                    mainLayout.addView(rooms[i]);
+
+                    rooms[i].setOnClickListener(new View.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(View v)
+                        {
+                            for (i = 0; i < numRooms; i++)
+                            {
+                                if (v.getId() == i)
+                                {
+                                    Intent intent = new Intent(SenzHome.this, SenzRoom1.class);
+                                    intent.putExtra("senzRoom", "Senz Room " + (i + 1));
+                                    startActivity(intent);
+                                }
+                            }
+                        }
+                    });
+
+
+                }
+                myButton.setEnabled(false);
+            }
+
+        });
+
+
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_senz_home);
-        int numRooms = 10;
-
-        //Main Homescreen layout
-        LinearLayout mainLayout = findViewById(R.id.MainLayout);
-
-        //Array of ImageButtons to be displayed on screen
-        ImageButton[] rooms = new ImageButton[numRooms];
-        ImageButton temp; //temp ImageButton used in for loop
-
-        //Array of TextViews to be displayed on screen
-        TextView[] roomText = new TextView[numRooms];
-        TextView tempText; //temp ImageButton used in for loop
-
-        //For loop to display the number of rooms equal to numRooms
-        for (int i = 0; i < numRooms; i++)
+    public void onBackPressed()
+    {
+        if(drawer.isDrawerOpen(GravityCompat.START))
         {
-            temp = new ImageButton(this);
-            tempText = new TextView(this);
-
-            //Setting parameters for the ImageButton
-            temp.setImageResource(R.drawable.room);
-            temp.setId(i);
-            temp.setLayoutParams(new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-            ));
-
-            //Setting parameters for the TextView
-            tempText.setText("Room " + (i+1));
-            tempText.setTextColor(getResources().getColor(R.color.white));
-            tempText.setTextSize(18);
-            tempText.setId(i);
-            tempText.setLayoutParams(new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.MATCH_PARENT
-            ));
-
-            //displaying the ImageButton and TextView
-            mainLayout.addView(tempText);
-            mainLayout.addView(temp);
-
-            //adding the current temp ImageButton and TextView to their respective arrays
-            rooms[i] = temp;
-            roomText[i] = tempText;
+            drawer.closeDrawer(GravityCompat.START);
         }
+        else
+        {
+            super.onBackPressed();
+        }
+
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
+    {
+        switch(menuItem.getItemId())
+        {
+            case R.id.admin:
+                                Intent intent = new Intent(SenzHome.this, LoginActivity.class);
+                                startActivity(intent);
+        }
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    public void setNavigationViewListener()
+    {
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
     }
 }
