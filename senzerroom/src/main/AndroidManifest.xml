@@ -16,8 +16,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SenzHome"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,14 +25,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SenzRoom1"
-            android:launchMode="singleInstance"
+            android:name=".LoginActivity"
             android:parentActivityName=".SenzHome" />
         <activity
-            android:name=".SenzAdminLoginActivity"
-            android:label="@string/title_activity_senz_admin_login"
+            android:name=".SenzRoomData"
+            android:label="@string/title_activity_senz_room_data"
             android:parentActivityName=".SenzHome" />
-        <activity android:name=".LoginActivity"
+        <activity android:name=".SenzSettings"
             android:parentActivityName=".SenzHome"/>
     </application>
 

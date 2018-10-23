@@ -1,3 +1,6 @@
+
+/*Team Diversity */
+
 package com.example.senzerroom;
 
 import android.content.DialogInterface;
@@ -5,6 +8,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -26,6 +30,7 @@ import org.w3c.dom.Text;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class SenzHome extends AppCompatActivity implements OnNavigationItemSelectedListener
 {
@@ -113,9 +118,18 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
                             {
                                 if (v.getId() == i)
                                 {
-                                    Intent intent = new Intent(SenzHome.this, SenzRoom1.class);
+                                    Intent intent = new Intent(SenzHome.this, SenzRoomData.class);
+                                    Random rnd = new Random();
+                                    int n = 1 + rnd.nextInt(1000);
                                     intent.putExtra("senzRoom", "Senz Room " + (i + 1));
+
                                     startActivity(intent);
+                                   /** if(i >= 1)
+                                    {
+                                        Bundle bundle = new Bundle();
+                                        bundle.putString("tempVal", "Temperature: " + n + "Degree Celsisus");
+                                        FirstFragment fragobj = new FirstFragment();
+                                    }*/
                                 }
                             }
                         }
@@ -153,6 +167,11 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
             case R.id.admin:
                                 Intent intent = new Intent(SenzHome.this, LoginActivity.class);
                                 startActivity(intent);
+                                break;
+            case R.id.settings:
+                                Intent intent1 = new Intent(SenzHome.this, SenzSettings.class);
+                                startActivity(intent1);
+                                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -162,5 +181,6 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
     {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.getMenu().getItem(0).setChecked(false);
     }
 }

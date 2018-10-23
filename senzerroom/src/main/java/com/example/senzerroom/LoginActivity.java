@@ -1,5 +1,7 @@
 package com.example.senzerroom;
 
+/*Team Diversity */
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,7 +40,7 @@ public class LoginActivity extends AppCompatActivity
 
     public void validate(String userName, String userPassword)
     {
-        if((userName == "Admin") && (userPassword == "1234"))
+        if((userName == "admin") && (userPassword == "1234"))
         {
             Intent intent = new Intent(LoginActivity.this, SenzHome.class);
             startActivity(intent);
