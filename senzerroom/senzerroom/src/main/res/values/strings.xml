@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Senzer Room</string>
-    <string name="defaultLabel">Room One</string>
-    <string name="defaultLabel2">Room Two</string>
-    <string name="defaultLabel3">Room Three</string>
-    <string name="MenuItem">Admin Access(Login)</string>
-    <string name="Settings1">Settings</string>
-    Settings
-</resources>

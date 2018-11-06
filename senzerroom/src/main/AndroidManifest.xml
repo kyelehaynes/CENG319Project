@@ -14,19 +14,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SenzHome">
+        <activity
+            android:name=".SenzHome"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SenzRoom1" />
-        <activity android:name=".SenzRoom2" />
-        <activity android:name=".SenzRoom3" />
         <activity
-            android:name=".SenzAdminLoginActivity"
-            android:label="@string/title_activity_senz_admin_login"></activity>
+            android:name=".LoginActivity"
+            android:parentActivityName=".SenzHome" />
+        <activity
+            android:name=".SenzRoomData"
+            android:label="@string/title_activity_senz_room_data"
+            android:parentActivityName=".SenzHome" />
+        <activity android:name=".SenzSettings"
+            android:parentActivityName=".SenzHome"/>
     </application>
 
 </manifest>
