@@ -34,6 +34,7 @@ import java.util.Random;
 
 public class SenzHome extends AppCompatActivity implements OnNavigationItemSelectedListener
 {
+    DBHelper mainDB;
     int i;
     int numRooms = 10;
     ImageButton[] rooms = new ImageButton[numRooms];
@@ -53,6 +54,10 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_senz_home);
+
+        mainDB = new DBHelper(this);
+
+        mainDB.initDB(numRooms);
 
         android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -121,7 +126,7 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
                                     Intent intent = new Intent(SenzHome.this, SenzRoomData.class);
                                     Random rnd = new Random();
                                     int n = 1 + rnd.nextInt(1000);
-                                    intent.putExtra("senzRoom", "Senz Room " + (i + 1));
+                                    intent.putExtra("senzRoom", "Senz Room " + (i + 1)).putExtra("numRooms", numRooms);
 
                                     startActivity(intent);
                                    /** if(i >= 1)

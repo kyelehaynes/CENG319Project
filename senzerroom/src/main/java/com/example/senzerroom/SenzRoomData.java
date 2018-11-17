@@ -11,6 +11,7 @@ import android.support.design.widget.TabLayout;
 
 public class SenzRoomData extends AppCompatActivity
 {
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
