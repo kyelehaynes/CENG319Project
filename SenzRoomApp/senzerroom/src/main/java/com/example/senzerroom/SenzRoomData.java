@@ -3,20 +3,55 @@
 
 package com.example.senzerroom;
 
+import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import static com.example.senzerroom.SenzHome.TIME;
+import static com.example.senzerroom.SenzHome.VACANT;
+import static com.example.senzerroom.SenzHome.TEMP;
+import static com.example.senzerroom.SenzHome.LIGHT;
+
 
 
 public class SenzRoomData extends AppCompatActivity
 {
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    /*
+    public static final String TIME = "Time";
+    public static final String VACANT = "Vacant";
+    public static final String TEMP = "Temperature";
+    public static final String LIGHT = "Lights";
+*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_senz_room_data);
+        int roomNum;
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null)
+        {
+             roomNum = bundle.getInt("senzRoom");
+            //extView.setText(textId);
+            this.setTitle("Senz Room " + roomNum );
+            //textView.setTextColor(Color.RED);
+        } else{roomNum = 1;}
+
+        getData(roomNum);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("Vacancy"));
@@ -44,13 +79,44 @@ public class SenzRoomData extends AppCompatActivity
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
-        Bundle bundle = getIntent().getExtras();
-        if(bundle != null)
-        {
-            int roomNum = bundle.getInt("senzRoom");
-            //extView.setText(textId);
-            this.setTitle("Senz Room " + roomNum );
-            //textView.setTextColor(Color.RED);
-        }
+    }
+
+    public void getData(int roomNum)
+    {
+        DocumentReference noteRef = db.collection("Rooms").document("Room" + roomNum);
+
+        noteRef.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>()
+                {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot)
+                    {
+                        String time;
+                        String temp;
+                        String vacancy;
+                        String light;
+                        if(documentSnapshot.exists())
+                        {
+                            time = documentSnapshot.getString(TIME);
+                            vacancy = documentSnapshot.getString(VACANT);
+                            light = documentSnapshot.getString(LIGHT);
+                            temp = documentSnapshot.getString(TEMP);
+                            Toast.makeText(SenzRoomData.this, "Time:" + time + "Vacancy: " + vacancy + "Light: " + light + temp, Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            Toast.makeText(SenzRoomData.this, "NO Data", Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener()
+                {
+                    @Override
+                    public void onFailure(@NonNull Exception e)
+                    {
+
+                    }
+                });
     }
 }
