@@ -269,14 +269,14 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
         int max = 1;
         int min = 0;
         Random rand = new Random();
-        return Integer.toString(rand.nextInt((max-min)+max)+min);
+        return Integer.toString(rand.nextInt((max-min)+ 1)+min);
     }
 
     public String randomTemp(){
         int max = 50;
         int min = 10;
         Random rand = new Random();
-        return Integer.toString(rand.nextInt((max-min)+max)+min);
+        return Integer.toString(rand.nextInt((max-min)+ 1)+min);
     }
 
 
