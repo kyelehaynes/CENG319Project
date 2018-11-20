@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "124052193325",
+    "firebase_url": "https://senzerroom.firebaseio.com",
+    "project_id": "senzerroom",
+    "storage_bucket": "senzerroom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124052193325:android:fe2a3b435a8f6478",
+        "android_client_info": {
+          "package_name": "com.example.senzerroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124052193325-n353b5raf86t2e4l09g1bl6qbgicis3e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.senzerroom",
+            "certificate_hash": "d3a5082494e3847b362cefbba94424e683e92466"
+          }
+        },
+        {
+          "client_id": "124052193325-49d9ts3blgq2vfuq2idmibg25oo64fq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjP5nN498qdEEvVCy6KkzPNzSBuWke2TM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124052193325-49d9ts3blgq2vfuq2idmibg25oo64fq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

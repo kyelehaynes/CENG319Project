@@ -5,7 +5,10 @@ package com.example.senzerroom;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -30,29 +33,27 @@ import org.w3c.dom.Text;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.Random;
 
 public class SenzHome extends AppCompatActivity implements OnNavigationItemSelectedListener
 {
-    int i;
-    int numRooms = 10;
-    ImageButton[] rooms = new ImageButton[numRooms];
-    ImageButton temp; //temp ImageButton used in for loop
 
-    //Array of TextViews to be displayed on screen
-    TextView[] roomText = new TextView[numRooms];
-    TextView tempText; //temp ImageButton used in for loop
-
-    ArrayList<ImageButton> imgButton = new ArrayList<>(Arrays.asList(rooms));
-    ArrayList<TextView> textViewArrayList = new ArrayList<>(Arrays.asList(roomText));
 
     DrawerLayout drawer;
+    int numRooms;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_senz_home);
+
+        ImageButton temp; //temp ImageButton used in for loop
+
+        //Array of TextViews to be displayed on screen
+
 
         android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -66,21 +67,46 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
         final LinearLayout mainLayout = findViewById(R.id.MainLayout);
         final Button myButton;
         final Button aButton;
-        myButton = new Button(SenzHome.this);
-        myButton.setId(R.id.textRoom);
-        myButton.setText("Generate 10 Rooms");
-        myButton.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT));
-        mainLayout.addView(myButton);
-        myButton.setOnClickListener(new View.OnClickListener()
+        final Button secondButton;
+        aButton = new Button(SenzHome.this);
+        aButton.setId(R.id.secondButton);
+        aButton.setText("Add Rooms");
+        aButton.setLayoutParams(new LinearLayout.LayoutParams
+                (LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        mainLayout.addView(aButton);
+        Intent intent = getIntent();
+        numRooms = intent.getIntExtra("roomAmount", 0);
+        aButton.setOnClickListener(new View.OnClickListener()
         {
-
             @Override
             public void onClick(View v)
             {
-                //For loop to display the number of rooms equal to numRooms
-                for (i = 0; i < numRooms; i++)
+                Intent newIntent = new Intent(SenzHome.this, SenzSettings.class);
+                startActivity(newIntent);
+            }
+        });
+            if(numRooms != 0)
+            {
+                TextView view = new TextView(SenzHome.this);
+                view.setText("Number of Rooms: " + numRooms);
+                view.setTextColor(getResources().getColor(R.color.white));
+                view.setTextSize(18);
+                view.setVisibility(View.VISIBLE);
+                view.setLayoutParams(new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT
+                ));
+                mainLayout.addView(view);
+                ImageButton[] rooms = new ImageButton[numRooms];
+                //temp ImageButton used in for loop
+
+                //Array of TextViews to be displayed on screen
+                TextView[] roomText = new TextView[numRooms];
+                TextView tempText; //temp ImageButton used in for loop
+
+                ArrayList<ImageButton> imgButton = new ArrayList<>(Arrays.asList(rooms));
+                ArrayList<TextView> textViewArrayList = new ArrayList<>(Arrays.asList(roomText));
+                for (int i = 0; i < numRooms; i++)
                 {
                     temp = new ImageButton(SenzHome.this);
                     tempText = new TextView(SenzHome.this);
@@ -114,36 +140,31 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
                         @Override
                         public void onClick(View v)
                         {
-                            for (i = 0; i < numRooms; i++)
+                            for (int i = 0; i < numRooms; i++)
                             {
                                 if (v.getId() == i)
                                 {
                                     Intent intent = new Intent(SenzHome.this, SenzRoomData.class);
                                     Random rnd = new Random();
                                     int n = 1 + rnd.nextInt(1000);
-                                    intent.putExtra("senzRoom", "Senz Room " + (i + 1));
+                                    intent.putExtra("senzRoom", "Senz Room " + (i + 1)).putExtra("numRooms", numRooms);
 
                                     startActivity(intent);
-                                   /** if(i >= 1)
-                                    {
-                                        Bundle bundle = new Bundle();
-                                        bundle.putString("tempVal", "Temperature: " + n + "Degree Celsisus");
-                                        FirstFragment fragobj = new FirstFragment();
-                                    }*/
+
                                 }
                             }
                         }
                     });
 
-
                 }
-                myButton.setEnabled(false);
+
             }
 
-        });
-
-
     }
+
+
+
+
 
     @Override
     public void onBackPressed()
@@ -183,4 +204,11 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(false);
     }
+
+    public void deleteRoom()
+    {
+
+    }
 }
+
+
