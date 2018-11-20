@@ -33,6 +33,7 @@
             android:parentActivityName=".SenzHome" />
         <activity android:name=".SenzSettings"
             android:parentActivityName=".SenzHome"/>
+        
     </application>
 
 </manifest>

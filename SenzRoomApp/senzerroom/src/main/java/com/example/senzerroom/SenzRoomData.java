@@ -3,11 +3,14 @@
 
 package com.example.senzerroom;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -28,12 +31,7 @@ public class SenzRoomData extends AppCompatActivity
 {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    /*
-    public static final String TIME = "Time";
-    public static final String VACANT = "Vacant";
-    public static final String TEMP = "Temperature";
-    public static final String LIGHT = "Lights";
-*/
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -52,8 +50,10 @@ public class SenzRoomData extends AppCompatActivity
         } else{roomNum = 1;}
 
         getData(roomNum);
-
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        bundle.putString("numRoom", Integer.toString(roomNum));
+        //bundle.putString("senzTime", TIME);
+        //bundle.putString("vacancy", VACANT);
+        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("Vacancy"));
         tabLayout.addTab(tabLayout.newTab().setText("Temperature"));
         tabLayout.addTab(tabLayout.newTab().setText("Light"));
@@ -61,7 +61,7 @@ public class SenzRoomData extends AppCompatActivity
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         final PagerAdapter adapter = new PagerAdapter
-                (getSupportFragmentManager(), tabLayout.getTabCount());
+                (getSupportFragmentManager(), tabLayout.getTabCount(), bundle);
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
@@ -69,6 +69,8 @@ public class SenzRoomData extends AppCompatActivity
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
+
+
             }
 
             @Override
@@ -101,7 +103,7 @@ public class SenzRoomData extends AppCompatActivity
                             vacancy = documentSnapshot.getString(VACANT);
                             light = documentSnapshot.getString(LIGHT);
                             temp = documentSnapshot.getString(TEMP);
-                            Toast.makeText(SenzRoomData.this, "Time:" + time + "Vacancy: " + vacancy + "Light: " + light + temp, Toast.LENGTH_SHORT).show();
+
                         }
                         else
                         {
@@ -119,4 +121,23 @@ public class SenzRoomData extends AppCompatActivity
                     }
                 });
     }
+
+    public void sendVac(String time, String vacancy)
+    {
+        Bundle bundle = getIntent().getExtras();
+        bundle.putString("senzTime", time);
+        bundle.putString("vacancy", vacancy);
+
+    }
+
+    public String myVal(String time, int numRooms)
+    {
+        DocumentSnapshot documentSnapshot = null;
+        if(documentSnapshot.exists())
+        {
+            time = documentSnapshot.getString(TIME);
+        }
+        return time + Integer.toString(numRooms);
+    }
+
 }
