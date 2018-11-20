@@ -63,12 +63,12 @@ public class FirstFragment extends Fragment {
                            int vacancy = Integer.parseInt(aVal);
                            if(vacancy == 1)
                            {
-                               textView.setTextColor(Color.GREEN);
+                               textView.setTextColor(Color.RED);
                                textView.setText("Vacancy: " + aVal + "(Room is Occupied)");
                            }
                            else
                            {
-                               textView.setTextColor(Color.RED);
+                               textView.setTextColor(Color.GREEN);
                                textView.setText("Vacancy: " + aVal + "(Room is Empty)");
                            }
 
