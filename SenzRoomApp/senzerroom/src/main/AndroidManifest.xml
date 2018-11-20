@@ -31,9 +31,10 @@
             android:name=".SenzRoomData"
             android:label="@string/title_activity_senz_room_data"
             android:parentActivityName=".SenzHome" />
-        <activity android:name=".SenzSettings"
-            android:parentActivityName=".SenzHome"/>
-        
+        <activity
+            android:name=".SenzSettings"
+            android:parentActivityName=".SenzHome" />
+        <activity android:name=".SenzRegister"></activity>
     </application>
 
 </manifest>

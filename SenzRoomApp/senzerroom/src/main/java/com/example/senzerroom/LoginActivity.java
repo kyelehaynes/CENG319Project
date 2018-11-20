@@ -33,14 +33,26 @@ public class LoginActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                validate(Name.getText().toString(), Password.getText().toString());
+                Intent intent = new Intent(LoginActivity.this, SenzHome.class);
+                startActivity(intent);
+            }
+        });
+
+        Button register = (Button) findViewById(R.id.registerButton);
+        register.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent registerPage = new Intent(LoginActivity.this, SenzRegister.class);
+                startActivity(registerPage);
             }
         });
     }
 
-    public void validate(String userName, String userPassword)
+   /* public void validate(String userName, String userPassword)
     {
-        if((userName == "admin") && (userPassword == "1234"))
+        if((userName == "kogul".trim()) && (userPassword=="kogul".trim()))
         {
             Intent intent = new Intent(LoginActivity.this, SenzHome.class);
             startActivity(intent);
@@ -54,5 +66,5 @@ public class LoginActivity extends AppCompatActivity
                 Login.setEnabled(false);
             }
         }
-    }
+    }*/
 }
