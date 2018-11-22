@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item type="id" name = "secondButton"/>
-    <item type="id" name = "thirdButton"/>
-    <item type="id" name = "addOneRoom"/>
-</resources>
