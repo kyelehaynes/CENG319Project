@@ -3,9 +3,13 @@
 
 package com.example.senzerroom;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
@@ -18,6 +22,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -59,6 +64,7 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
     DrawerLayout drawer;
     int numRooms;
 
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -78,6 +84,8 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         setNavigationViewListener();
+
+
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         //Main Homescreen layout
@@ -85,23 +93,31 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
         final Button myButton;
         final Button aButton;
         final Button secondButton;
-        aButton = new Button(SenzHome.this);
-        aButton.setId(R.id.secondButton);
-        aButton.setText("Add Rooms");
-        aButton.setLayoutParams(new LinearLayout.LayoutParams
-                (LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        mainLayout.addView(aButton);
         Intent intent = getIntent();
         numRooms = intent.getIntExtra("roomAmount", 0);
-        aButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
+        SharedPreferences preferences = getSharedPreferences("shared", MODE_PRIVATE);
+        int myVal = preferences.getInt("myVal", 0);
+            if(myVal != 10)
             {
-                Intent newIntent = new Intent(SenzHome.this, SenzSettings.class);
-                startActivity(newIntent);
+                    android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+                         builder.setTitle("Room Generation")
+                        .setMessage("To Create Rooms go to Settings"+" Admin please login")
+                        .setPositiveButton("Ok", new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which)
+                            {
+
+                            }
+                        });
+                builder.show();
+
+                drawer.openDrawer(Gravity.LEFT);
             }
-        });
+            if(numRooms == 0)
+            {
+                numRooms = preferences.getInt("roomAmount", numRooms);
+            }
             if(numRooms != 0)
             {
                 TextView view = new TextView(SenzHome.this);
@@ -164,7 +180,7 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
                                 {
                                     Intent intent = new Intent(SenzHome.this, SenzRoomData.class);
                                     Random rnd = new Random();
-                                    int n = 1 + rnd.nextInt(1000);
+                                    //int n = 1 + rnd.nextInt(1000);
                                     intent.putExtra("senzRoom", (i + 1)).putExtra("numRooms", numRooms);
 
                                     startActivity(intent);

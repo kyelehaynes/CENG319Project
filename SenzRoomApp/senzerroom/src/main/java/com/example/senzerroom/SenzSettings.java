@@ -2,7 +2,9 @@
 
 package com.example.senzerroom;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,12 +42,19 @@ public class SenzSettings extends AppCompatActivity
                         final Intent intent = new Intent(SenzSettings.this, SenzHome.class);
                         intent.putExtra("roomAmount", roomAmount);
                         startActivityForResult(intent, 1);
+
+                        SharedPreferences sp = getSharedPreferences("shared", Activity.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putInt("roomAmount", roomAmount);
+                        editor.putInt("myVal", 10);
+                        editor.commit();
                         //finish();
                     }
                 }
             });
 
     }
+
 
 }
     /*final String roomAmount = text.getText().toString();
