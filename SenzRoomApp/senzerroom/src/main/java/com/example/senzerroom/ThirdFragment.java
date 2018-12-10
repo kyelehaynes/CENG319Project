@@ -57,14 +57,10 @@ public class ThirdFragment extends Fragment {
                             String aVal = documentSnapshot.getString(LIGHT);
                             TextView textView = getView().findViewById(R.id.LightText);
                             final int light = Integer.parseInt(aVal);
-                            Switch mySwitch = getView().findViewById(R.id.switch1);
-                            mySwitch.setTextOn("on");
-                            mySwitch.setTextOff("off");
                             if(light == 1)
                             {
                                 textView.setTextColor(Color.GREEN);
                                 textView.setText("Light is On Do you wish to turn it off?");
-                                mySwitch.setChecked(true);
 
 
                             }

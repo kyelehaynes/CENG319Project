@@ -45,7 +45,10 @@ public class PagerAdapter extends FragmentPagerAdapter {
                 ThirdFragment tab3 = new ThirdFragment();
                 tab3.setArguments(bundle);
                 return tab3;
-
+            case 3:
+                AdminFragment tab4 = new AdminFragment();
+                tab4.setArguments(bundle);
+                return tab4;
             default:
                 return null;
         }

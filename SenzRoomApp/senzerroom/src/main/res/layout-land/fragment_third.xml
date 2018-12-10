@@ -6,16 +6,6 @@
     android:orientation="vertical"
     android:background="@color/appBackground">
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="211dp"
-        android:layout_height="87dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="191dp"
-        android:text="@string/LightButton"
-        tools:text="@string/LightButton" />
 
     <TextView
         android:id="@+id/LightText"

@@ -43,6 +43,10 @@ public class SenzRoomData extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_senz_room_data);
         int roomNum;
+        final int finalRoomNum;
+
+        mFbAuth = FirebaseAuth.getInstance();
+        mFbUsr = mFbAuth.getCurrentUser();
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null)
@@ -53,7 +57,7 @@ public class SenzRoomData extends AppCompatActivity
             //textView.setTextColor(Color.RED);
         } else{roomNum = 1;}
 
-        getData(roomNum);
+
         bundle.putString("numRoom", Integer.toString(roomNum));
         //bundle.putString("senzTime", TIME);
         //bundle.putString("vacancy", VACANT);
@@ -65,10 +69,10 @@ public class SenzRoomData extends AppCompatActivity
         if (mFbUsr == null){
 
         }else{
-            tabLayout.addTab(tabLayout.newTab().setText("Light"));
+            tabLayout.addTab(tabLayout.newTab().setText("Admin"));
         }
 
-
+        finalRoomNum = roomNum;
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
@@ -83,6 +87,7 @@ public class SenzRoomData extends AppCompatActivity
                 viewPager.setCurrentItem(tab.getPosition());
 
 
+                getData(finalRoomNum);
             }
 
             @Override
@@ -105,22 +110,12 @@ public class SenzRoomData extends AppCompatActivity
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot)
                     {
-                        String time;
-                        String temp;
-                        String vacancy;
-                        String light;
                         if(documentSnapshot.exists())
                         {
-                            time = documentSnapshot.getString(TIME);
-                            vacancy = documentSnapshot.getString(VACANT);
-                            light = documentSnapshot.getString(LIGHT);
-                            temp = documentSnapshot.getString(TEMP);
-
                         }
                         else
                         {
                             Toast.makeText(SenzRoomData.this, "NO Data", Toast.LENGTH_SHORT).show();
-
                         }
                     }
                 })
