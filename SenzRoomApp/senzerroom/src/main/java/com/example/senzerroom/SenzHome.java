@@ -222,14 +222,16 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
             case R.id.admin:
                                 Intent intent = new Intent(SenzHome.this, LoginActivity.class);
                                 startActivity(intent);
+                                //menuItem.setChecked(false);
                                 break;
             case R.id.settings:
                                 Intent intent1 = new Intent(SenzHome.this, SenzSettings.class);
                                 startActivity(intent1);
+                                //menuItem.setChecked(false);
                                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
-        return true;
+        return false;
     }
 
     public void setNavigationViewListener()
@@ -239,10 +241,6 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
         navigationView.getMenu().getItem(0).setChecked(false);
     }
 
-    public void deleteRoom()
-    {
-
-    }
 
     public void generateData(int numRooms){
             FirebaseApp.initializeApp(SenzHome.this);
