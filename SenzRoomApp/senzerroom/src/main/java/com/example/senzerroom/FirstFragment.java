@@ -44,8 +44,7 @@ public class FirstFragment extends Fragment {
         return v;
     }
 
-    public void getVac(String room)
-    {
+    public void getVac(String room) {
 
         int myRoom = Integer.parseInt(room);
         DocumentReference noteRef = db.collection("Rooms").document("Room" + myRoom);

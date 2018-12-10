@@ -18,8 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity
-{
+public class LoginActivity extends AppCompatActivity {
+
     private EditText name;
     private EditText password;
     private Button loginBtn;
@@ -27,11 +27,9 @@ public class LoginActivity extends AppCompatActivity
     private FirebaseAuth auth;
     private FirebaseUser currentUser;
 
-
-    int count = 10;
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -89,11 +87,6 @@ public class LoginActivity extends AppCompatActivity
 
     public void UserLogin(String email,String pass){
 
-     //   name = (EditText) findViewById(R.id.nameEntry);
-     //   password = (EditText) findViewById(R.id.passEntry);
-
-        //String email = name.getText().toString().trim();
-        //String pass = password.getText().toString().trim();
         auth.signInWithEmailAndPassword(email,pass)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override

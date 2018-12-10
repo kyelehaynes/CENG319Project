@@ -19,6 +19,8 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import static com.example.senzerroom.SenzHome.TIME;
 import static com.example.senzerroom.SenzHome.VACANT;
@@ -30,6 +32,8 @@ import static com.example.senzerroom.SenzHome.LIGHT;
 public class SenzRoomData extends AppCompatActivity
 {
 
+    private FirebaseAuth mFbAuth;
+    private FirebaseUser mFbUsr;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
@@ -57,6 +61,14 @@ public class SenzRoomData extends AppCompatActivity
         tabLayout.addTab(tabLayout.newTab().setText("Vacancy"));
         tabLayout.addTab(tabLayout.newTab().setText("Temperature"));
         tabLayout.addTab(tabLayout.newTab().setText("Light"));
+
+        if (mFbUsr == null){
+
+        }else{
+            tabLayout.addTab(tabLayout.newTab().setText("Light"));
+        }
+
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
