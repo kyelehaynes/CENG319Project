@@ -5,6 +5,7 @@ package com.example.senzerroom;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,23 +54,23 @@ public class SecondFragment extends Fragment {
                         {
                             String aVal = documentSnapshot.getString(TEMP);
                             TextView textView = getView().findViewById(R.id.tempText);
+                            ConstraintLayout layout = getView().findViewById(R.id.tempLayout);
                             int temp = Integer.parseInt(aVal);
                             if(temp > 35)
                             {
-                                textView.setTextColor(Color.RED);
+                                layout.setBackgroundColor(Color.RED);
                             }
                             if(temp < 35)
                             {
-                                textView.setTextColor(Color.BLUE);
+                                layout.setBackgroundColor(Color.BLUE);
                             }
                             if(temp == 35)
                             {
-                                textView.setTextColor(Color.GREEN);
+                                layout.setBackgroundColor(Color.GREEN);
                             }
-                            textView.setText("Room Temperature: " + aVal + " Degrees Celcius");
+                            textView.setText("Room Temperature: " + aVal + " Degrees Celsius");
                             String timeVal = documentSnapshot.getString(TIME);
                             TextView timeText = getView().findViewById(R.id.timeText);
-                            timeText.setTextColor(Color.YELLOW);
                             timeText.setText("Time: " + timeVal);
                         }
                     }

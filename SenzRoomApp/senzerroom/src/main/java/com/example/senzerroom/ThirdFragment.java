@@ -5,6 +5,7 @@ package com.example.senzerroom;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +38,11 @@ public class ThirdFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_third, container, false);
         String room = getArguments().getString("numRoom");
         getLight(room);
+
+        new Thread(){
+
+        };
+
         return v;
     }
 
@@ -56,25 +62,27 @@ public class ThirdFragment extends Fragment {
                         {
                             String aVal = documentSnapshot.getString(LIGHT);
                             TextView textView = getView().findViewById(R.id.LightText);
+                            ConstraintLayout layout = getView().findViewById(R.id.lightLayout);
                             final int light = Integer.parseInt(aVal);
                             if(light == 1)
                             {
-                                textView.setTextColor(Color.GREEN);
-                                textView.setText("Light is On Do you wish to turn it off?");
+                               // textView.setTextColor(Color.GREEN);
+                                layout.setBackgroundColor(Color.GREEN);
+                                textView.setText("Light is On");
 
 
                             }
                             if(light == 0)
                             {
-                                textView.setTextColor(Color.RED);
-                                textView.setText("Light is Off Do you wish to turn it on?");
+                               // textView.setTextColor(Color.RED);
+                                layout.setBackgroundColor(Color.RED);
+                                textView.setText("Light is Off");
 
                             }
 
 
                             String timeVal = documentSnapshot.getString(TIME);
                             TextView timeText = getView().findViewById(R.id.timeText);
-                            timeText.setTextColor(Color.YELLOW);
                             timeText.setText("Time: " + timeVal);
                         }
                     }
@@ -88,5 +96,12 @@ public class ThirdFragment extends Fragment {
                     }
                 });
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        String room = getArguments().getString("numRoom");
+        getLight(room);
     }
 }

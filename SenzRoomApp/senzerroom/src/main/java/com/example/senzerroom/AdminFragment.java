@@ -114,6 +114,5 @@ public class AdminFragment extends Fragment {
 
                     }
                 });
-
     }
 }

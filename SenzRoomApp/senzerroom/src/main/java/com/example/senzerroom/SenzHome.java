@@ -129,6 +129,7 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.MATCH_PARENT
                 ));
+                view.setGravity(Gravity.CENTER);
                 mainLayout.addView(view);
                 ImageButton[] rooms = new ImageButton[numRooms];
                 //temp ImageButton used in for loop
@@ -147,9 +148,12 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
                     //Setting parameters for the ImageButton
                     temp.setImageResource(R.drawable.room);
                     temp.setId(i);
+                    temp.setBackground(null);
+
                     temp.setLayoutParams(new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT
+                            Gravity.CENTER
                     ));
 
                     //Setting parameters for the TextView
@@ -157,6 +161,7 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
                     tempText.setTextColor(getResources().getColor(R.color.white));
                     tempText.setTextSize(18);
                     tempText.setId(i + 10);
+                    tempText.setGravity(Gravity.CENTER);
                     tempText.setLayoutParams(new LinearLayout.LayoutParams(
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.MATCH_PARENT
