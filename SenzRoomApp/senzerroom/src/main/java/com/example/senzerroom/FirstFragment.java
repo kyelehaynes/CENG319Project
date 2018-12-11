@@ -65,17 +65,17 @@ public class FirstFragment extends Fragment {
                            if(vacancy == 1)
                            {
                                layout.setBackgroundColor(Color.RED);
-                               textView.setText("Room is Occupied");
+                               textView.setText(getResources().getString(R.string.RoomOccupied));
                            }
                            else
                            {
                                layout.setBackgroundColor(Color.GREEN);
-                               textView.setText("Room is Vacent");
+                               textView.setText(getResources().getString(R.string.RoomVacant));
                            }
 
                            String timeVal = documentSnapshot.getString(TIME);
                            TextView timeText = getView().findViewById(R.id.timeText);
-                           timeText.setText("Time: " + timeVal);
+                           timeText.setText(getResources().getString(R.string.Time) + timeVal);
                         }
                     }
                 })

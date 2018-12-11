@@ -131,23 +131,4 @@ public class SenzRoomData extends AppCompatActivity
                     }
                 });
     }
-
-    public void sendVac(String time, String vacancy)
-    {
-        Bundle bundle = getIntent().getExtras();
-        bundle.putString("senzTime", time);
-        bundle.putString("vacancy", vacancy);
-
-    }
-
-    public String myVal(String time, int numRooms)
-    {
-        DocumentSnapshot documentSnapshot = null;
-        if(documentSnapshot.exists())
-        {
-            time = documentSnapshot.getString(TIME);
-        }
-        return time + Integer.toString(numRooms);
-    }
-
 }

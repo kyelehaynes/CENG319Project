@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
 				}
 			}
 		});
-
+/*
         Button register = (Button) findViewById(R.id.registerButton);
         register.setOnClickListener(new View.OnClickListener()
         {
@@ -83,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(registerPage);
             }
         });
+      */
     }
 
     public void UserLogin(String email,String pass){

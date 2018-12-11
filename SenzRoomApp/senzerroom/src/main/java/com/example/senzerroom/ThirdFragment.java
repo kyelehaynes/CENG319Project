@@ -42,12 +42,13 @@ public class ThirdFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_third, container, false);
         String room = getArguments().getString("numRoom");
-        getLight(room);
+        TextView view = v.findViewById(R.id.LightText);
+        getLight(room,view);
 
         return v;
     }
 
-    public void getLight(String room)
+    public void getLight(String room, final TextView textView)
     {
 
         int myRoom = Integer.parseInt(room);
@@ -62,14 +63,13 @@ public class ThirdFragment extends Fragment {
                         if(documentSnapshot.exists())
                         {
                             String aVal = documentSnapshot.getString(LIGHT);
-                            TextView textView = getView().findViewById(R.id.LightText);
                             ConstraintLayout layout = getView().findViewById(R.id.lightLayout);
                             final int light = Integer.parseInt(aVal);
                             if(light == 1)
                             {
                                // textView.setTextColor(Color.GREEN);
                                 layout.setBackgroundColor(Color.GREEN);
-                                textView.setText("Light is On");
+                                textView.setText(getResources().getString(R.string.LightOn));
 
 
                             }
@@ -77,14 +77,14 @@ public class ThirdFragment extends Fragment {
                             {
                                // textView.setTextColor(Color.RED);
                                 layout.setBackgroundColor(Color.RED);
-                                textView.setText("Light is Off");
+                                textView.setText(getResources().getString(R.string.LightOff));
 
                             }
 
 
                             String timeVal = documentSnapshot.getString(TIME);
                             TextView timeText = getView().findViewById(R.id.timeText);
-                            timeText.setText("Time: " + timeVal);
+                            timeText.setText(getResources().getString(R.string.Time) + timeVal);
                         }
                     }
                 })
@@ -98,15 +98,6 @@ public class ThirdFragment extends Fragment {
                 });
 
     }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        String room = getArguments().getString("numRoom");
-        getLight(room);
-    }
-
-
 
     @Override
     public void onDestroy()

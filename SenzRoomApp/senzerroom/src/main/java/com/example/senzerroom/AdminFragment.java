@@ -82,7 +82,7 @@ public class AdminFragment extends Fragment {
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
-                                                    Toast.makeText(getActivity(), "Updated Value off", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(getActivity(), getResources().getString(R.string.LightOff), Toast.LENGTH_SHORT).show();
                                                 }
                                             });
 
@@ -97,7 +97,7 @@ public class AdminFragment extends Fragment {
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
-                                                    Toast.makeText(getActivity(), "Updated Value on", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(getActivity(), getResources().getString(R.string.LightOn), Toast.LENGTH_SHORT).show();
                                                 }
                                             });
                                     //button.setText("Turn On");

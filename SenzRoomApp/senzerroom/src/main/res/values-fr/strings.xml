@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Senzer Room</string>
+    <string name="defaultLabel">Chambre Un</string>
+    <string name="defaultLabel2">Chambre Deux</string>
+    <string name="defaultLabel3">Chambre Trois</string>
+    <string name="MenuItem">Login Administrateur</string>
+    <string name="Settings1">Réglages</string>
+    <string name="title_activity_senz_admin_login">Connecter</string>
+    <string name="textRoom">Numero de Chambre</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de Passe</string>
+    <string name="action_sign_in">Connecter ou Registre</string>
+    <string name="action_sign_in_short">Connecter</string>
+    <string name="error_invalid_email">Cette adresse email est invalide</string>
+    <string name="error_invalid_password">Ce mot de passe est trop court</string>
+    <string name="error_incorrect_password">Ce mot de passe est incorrect</string>
+    <string name="error_field_required">Ce champ est requis</string>
+    <string name="permission_rationale">Les autorisations de contacts sont nécessaires pour la fourniture de courrier électronique
+        finitions</string>
+    <string name="logout">Déconnexion</string>
+    <string name="settings">Réglages</string>
+    <item name="senzRoom" type="id"></item>
+    <item name="textRoom" type="id"></item>
+    <item name="roomAdder" type="id"></item>
+    <string name="AdminLogin">Login Administrateur </string>
+    <string name="Login">Connecter</string>
+    <string name="Name">Nom</string>
+    <string name="Password">Mot de Passe</string>
+    <string name="attempts">Nombre de tentatives incorrectes: </string>
+    <string name="senzerRoom">Senzer Room</string>
+    <string name="TeamDiv">d\'équipe Diversité</string>
+    <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
+    <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
+    <string name="SenzPic">PhotoSenz</string>
+    <string name="title_activity_senz_room_data">SenzRoomData</string>
+    <string name="tab_text_1">Onglet 1</string>
+    <string name="tab_text_2">Onglet 2</string>
+    <string name="tab_text_3">Onglet 3</string>
+    <string name="action_settings">Réglages</string>
+    <string name="Temp">La Température: </string>
+    <string name="LightButton">Lumière</string>
+    <string name="section_format">Bonjour Le Monde: %1$d</string>
+
+    <string name="roomNumber">Nombre de Chambres</string>
+    <string name="submit">Sousmettre</string>
+    <string name="NumberofRoom">Numero</string>
+    <string name="roomAmount">Nombre de Chambres</string>
+    <string name="roomVacancy">Vacant: </string>
+    <string name="Time">Temps: </string>
+    <string name="Light">Lumière: </string>
+    <string name="LightOption">Lumière: </string>
+    <string name="Registration">Enregistrement</string>
+
+    <string name="lightPurple">Violet Clair</string>
+    <string name="lightBlue">Bleu Clair</string>
+    <string name="DarkBlue">Bleu Foncé</string>
+    <string name="DarkTheme">Gris</string>
+
+    <string name="RoomOccupied">La chambre est occupée</string>
+    <string name="RoomVacant">La chambre est vacante</string>
+    <string name="RoomTemp">Température de Chambre: </string>
+    <string name="Celsius"> Degré Celsius</string>
+    <string name="LightOn">La Lumière est Allumée</string>
+    <string name="LightOff">La Lumière est éteinte</string>
+    <string name="Toggle">
+Activer / désactiver la lumière</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
+</resources>

@@ -46,7 +46,7 @@ public class SenzSettings extends AppCompatActivity
                         final Intent intent = new Intent(SenzSettings.this, SenzHome.class);
                         intent.putExtra("roomAmount", roomAmount);
                         startActivityForResult(intent, 1);
-                        button = findViewById(R.id.colorSubmit);
+                        //button = findViewById(R.id.colorSubmit);
                         SharedPreferences sp = getSharedPreferences("shared", Activity.MODE_PRIVATE);
                         final SharedPreferences.Editor editor = sp.edit();
                         editor.putInt("roomAmount", roomAmount);

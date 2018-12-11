@@ -68,10 +68,10 @@ public class SecondFragment extends Fragment {
                             {
                                 layout.setBackgroundColor(Color.GREEN);
                             }
-                            textView.setText("Room Temperature: " + aVal + " Degrees Celsius");
+                            textView.setText(getResources().getString(R.string.RoomTemp) + aVal + getResources().getString(R.string.Celsius));
                             String timeVal = documentSnapshot.getString(TIME);
                             TextView timeText = getView().findViewById(R.id.timeText);
-                            timeText.setText("Time: " + timeVal);
+                            timeText.setText(getResources().getString(R.string.Time) + timeVal);
                         }
                     }
                 })
