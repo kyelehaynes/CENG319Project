@@ -8,6 +8,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -96,6 +97,7 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
         Intent intent = getIntent();
         numRooms = intent.getIntExtra("roomAmount", 0);
         SharedPreferences preferences = getSharedPreferences("shared", MODE_PRIVATE);
+
         int myVal = preferences.getInt("myVal", 0);
             if(myVal != 10)
             {
@@ -196,8 +198,8 @@ public class SenzHome extends AppCompatActivity implements OnNavigationItemSelec
                     });
 
                 }
-
             }
+
 
     }
 

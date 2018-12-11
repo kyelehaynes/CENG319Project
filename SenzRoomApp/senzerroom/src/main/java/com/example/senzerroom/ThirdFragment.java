@@ -2,11 +2,16 @@
 
 package com.example.senzerroom;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,10 +43,6 @@ public class ThirdFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_third, container, false);
         String room = getArguments().getString("numRoom");
         getLight(room);
-
-        new Thread(){
-
-        };
 
         return v;
     }
@@ -103,5 +104,14 @@ public class ThirdFragment extends Fragment {
         super.onResume();
         String room = getArguments().getString("numRoom");
         getLight(room);
+    }
+
+
+
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+
     }
 }

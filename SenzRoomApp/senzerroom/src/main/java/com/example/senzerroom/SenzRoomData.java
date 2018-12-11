@@ -6,6 +6,7 @@ package com.example.senzerroom;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -109,6 +110,11 @@ public class SenzRoomData extends AppCompatActivity
                     {
                         if(documentSnapshot.exists())
                         {
+                            String aVal = documentSnapshot.getString(LIGHT);
+                            int lightVal = Integer.parseInt(aVal);
+                            Intent intent = new Intent("my-event");
+                            intent.putExtra("light", lightVal);
+
                         }
                         else
                         {

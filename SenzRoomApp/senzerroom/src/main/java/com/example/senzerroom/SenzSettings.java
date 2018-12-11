@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +19,8 @@ public class SenzSettings extends AppCompatActivity
 {
     private EditText text;
     private Button myButton;
+
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -42,11 +46,13 @@ public class SenzSettings extends AppCompatActivity
                         final Intent intent = new Intent(SenzSettings.this, SenzHome.class);
                         intent.putExtra("roomAmount", roomAmount);
                         startActivityForResult(intent, 1);
-
+                        button = findViewById(R.id.colorSubmit);
                         SharedPreferences sp = getSharedPreferences("shared", Activity.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sp.edit();
+                        final SharedPreferences.Editor editor = sp.edit();
                         editor.putInt("roomAmount", roomAmount);
                         editor.putInt("myVal", 10);
+
+
                         editor.commit();
                         //finish();
                     }
