@@ -1,4 +1,4 @@
-package com.example.senzerroom;
+package com.diversity.senzerroom;
 
 import android.content.ContentValues;
 import android.content.Context;

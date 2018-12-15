@@ -1,20 +1,12 @@
 
 /*Team Diversity */
 
-package com.example.senzerroom;
+package com.diversity.senzerroom;
 
 import android.os.Bundle;
-import android.provider.SyncStateContract;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import static com.example.senzerroom.SenzHome.TIME;
-import static com.example.senzerroom.SenzHome.VACANT;
-import static com.example.senzerroom.SenzHome.TEMP;
-import static com.example.senzerroom.SenzHome.LIGHT;
 
 public class PagerAdapter extends FragmentPagerAdapter {
 

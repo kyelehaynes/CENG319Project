@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.senzerroom">
+    package="com.diversity.senzerroom">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
 
     <application
         android:allowBackup="true"
@@ -16,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SenzHome"
+            android:name="com.diversity.senzerroom.SenzHome"
             android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -26,16 +23,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
-            android:parentActivityName=".SenzHome" />
+            android:name="com.diversity.senzerroom.LoginActivity"
+            android:parentActivityName="com.diversity.senzerroom.SenzHome" />
         <activity
-            android:name=".SenzRoomData"
+            android:name="com.diversity.senzerroom.SenzRoomData"
             android:label="@string/title_activity_senz_room_data"
-            android:parentActivityName=".SenzHome" />
+            android:parentActivityName="com.diversity.senzerroom.SenzHome" />
         <activity
-            android:name=".SenzSettings"
-            android:parentActivityName=".SenzHome" />
-        <activity android:name=".SenzRegister"></activity>
+            android:name="com.diversity.senzerroom.SenzSettings"
+            android:parentActivityName="com.diversity.senzerroom.SenzHome" />
+        <activity android:name="com.diversity.senzerroom.SenzRegister"></activity>
     </application>
 
 </manifest>

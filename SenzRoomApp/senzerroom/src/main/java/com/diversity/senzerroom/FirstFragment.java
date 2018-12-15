@@ -1,6 +1,6 @@
 /*Team Diversity */
 
-package com.example.senzerroom;
+package com.diversity.senzerroom;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,16 +12,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.senzerroom.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import static com.example.senzerroom.SenzHome.TIME;
-import static com.example.senzerroom.SenzHome.VACANT;
-import static com.example.senzerroom.SenzHome.TEMP;
-import static com.example.senzerroom.SenzHome.LIGHT;
+import static com.diversity.senzerroom.SenzHome.TIME;
+import static com.diversity.senzerroom.SenzHome.VACANT;
 
 public class FirstFragment extends Fragment {
 

@@ -1,6 +1,6 @@
 /*Team Diversity */
 
-package com.example.senzerroom;
+package com.diversity.senzerroom;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,16 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.senzerroom.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import static com.example.senzerroom.SenzHome.TIME;
-import static com.example.senzerroom.SenzHome.VACANT;
-import static com.example.senzerroom.SenzHome.TEMP;
-import static com.example.senzerroom.SenzHome.LIGHT;
 
 
 public class SecondFragment extends Fragment {
@@ -52,7 +48,7 @@ public class SecondFragment extends Fragment {
                     {
                         if(documentSnapshot.exists())
                         {
-                            String aVal = documentSnapshot.getString(TEMP);
+                            String aVal = documentSnapshot.getString(SenzHome.TEMP);
                             TextView textView = getView().findViewById(R.id.tempText);
                             ConstraintLayout layout = getView().findViewById(R.id.tempLayout);
                             int temp = Integer.parseInt(aVal);
@@ -69,7 +65,7 @@ public class SecondFragment extends Fragment {
                                 layout.setBackgroundColor(Color.GREEN);
                             }
                             textView.setText(getResources().getString(R.string.RoomTemp) + aVal + getResources().getString(R.string.Celsius));
-                            String timeVal = documentSnapshot.getString(TIME);
+                            String timeVal = documentSnapshot.getString(SenzHome.TIME);
                             TextView timeText = getView().findViewById(R.id.timeText);
                             timeText.setText(getResources().getString(R.string.Time) + timeVal);
                         }

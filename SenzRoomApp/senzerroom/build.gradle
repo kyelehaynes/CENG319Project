@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.example.senzerroom"
+        applicationId "com.diversity.senzerroom"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1

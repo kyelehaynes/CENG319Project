@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appBackground"
-    tools:context=".SenzSettings">
+    tools:context="com.diversity.senzerroom.SenzSettings">
 
     <EditText
         android:id="@+id/numberText"

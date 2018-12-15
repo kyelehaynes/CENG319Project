@@ -1,8 +1,7 @@
 /*Team Diversity */
 
-package com.example.senzerroom;
+package com.diversity.senzerroom;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -10,11 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.Switch;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.senzerroom.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
@@ -24,10 +21,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static com.example.senzerroom.SenzHome.LIGHT;
-import static com.example.senzerroom.SenzHome.TEMP;
-import static com.example.senzerroom.SenzHome.TIME;
 
 
 public class AdminFragment extends Fragment {
@@ -59,7 +52,7 @@ public class AdminFragment extends Fragment {
                     public void onSuccess(DocumentSnapshot documentSnapshot)
                     {
                         final Button button = getView().findViewById(R.id.switchButton);
-                        String aVal = documentSnapshot.getString(LIGHT);
+                        String aVal = documentSnapshot.getString(SenzHome.LIGHT);
                         final int light = Integer.parseInt(aVal);
                         if(light == 1)
                         {
@@ -76,7 +69,7 @@ public class AdminFragment extends Fragment {
                             {
                                 if(light == 1)
                                 {
-                                    data.put(LIGHT,"0");
+                                    data.put(SenzHome.LIGHT,"0");
 
                                     db.collection("Rooms").document("Room" + myRoom).update(data)
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -91,7 +84,7 @@ public class AdminFragment extends Fragment {
                                 }
                                 if(light == 0)
                                 {
-                                    data.put(LIGHT,"1");
+                                    data.put(SenzHome.LIGHT,"1");
 
                                     db.collection("Rooms").document("Room" + myRoom).update(data)
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {

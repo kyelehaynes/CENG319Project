@@ -1,32 +1,26 @@
 
 /*Team Diversity */
 
-package com.example.senzerroom;
+package com.diversity.senzerroom;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.view.View;
 import android.widget.Toast;
 
+import com.example.senzerroom.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import static com.example.senzerroom.SenzHome.TIME;
-import static com.example.senzerroom.SenzHome.VACANT;
-import static com.example.senzerroom.SenzHome.TEMP;
-import static com.example.senzerroom.SenzHome.LIGHT;
+import static com.diversity.senzerroom.SenzHome.LIGHT;
 
 
 

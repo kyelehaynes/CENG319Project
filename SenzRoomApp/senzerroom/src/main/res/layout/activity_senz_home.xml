@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/appBackground"
     android:fitsSystemWindows="true"
-    tools:context=".SenzHome"
+    tools:context="com.diversity.senzerroom.SenzHome"
     tools:openDrawer="start">
 <ScrollView
     android:layout_width="wrap_content"
